@@ -5,6 +5,13 @@
 
 ---
 
+| Nome                      | RM        |
+| ------------------------- | --------- |
+| Gustavo Bezerra Assumção  | RM 553076 |
+| Jó Sales                  | RM 552679 |
+| Miguel Garcez de Carvalho | RM 553768 |
+| Vinicius Souza e Silva    | RM 552781 |
+
 ## 2. Disciplina
 **Testing, Compliance and Quality**
 
