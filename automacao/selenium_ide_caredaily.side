@@ -1,0 +1,371 @@
+{
+  "id": "e963db81-4b1e-450f-90e6-a2122d641ea6",
+  "version": "2.0",
+  "name": "CareDaily_Sprint4_Automation",
+  "url": "http://localhost:3000",
+  "tests": [
+    {
+      "id": "da0d59ce-0814-49c0-9d0d-5872a08f5d02",
+      "name": "TA001 - Login com usuario valido",
+      "commands": [
+        {
+          "id": "c1f88ca0-cd9b-43fe-a808-724bcde594f7",
+          "comment": "Abre a tela de login inicial do Care Daily",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "89b7c844-325b-42fa-97eb-2a3bc5ee1027",
+          "comment": "Define tamanho de janela padrao para resolucao de teste",
+          "command": "setWindowSize",
+          "target": "1280x800",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "18f50cd5-9154-46c5-afc7-f13bb10be968",
+          "comment": "Preenche o email cadastrado do nutricionista",
+          "command": "type",
+          "target": "id=email",
+          "targets": [
+            ["id=email", "id"],
+            ["name=email", "name"],
+            ["css=#email", "css:finder"],
+            ["xpath=//input[@id='email']", "xpath:attributes"]
+          ],
+          "value": "nutri@caredaily.com"
+        },
+        {
+          "id": "27d0f367-1110-410a-b333-88575005e839",
+          "comment": "Preenche a senha forte correspondente",
+          "command": "type",
+          "target": "id=senha",
+          "targets": [
+            ["id=senha", "id"],
+            ["name=senha", "name"],
+            ["css=#senha", "css:finder"],
+            ["xpath=//input[@id='senha']", "xpath:attributes"]
+          ],
+          "value": "Nutri@1234"
+        },
+        {
+          "id": "90d1f8eb-bf38-4e4b-9e45-812e9b867c29",
+          "comment": "Clica no botao de submissao de credenciais",
+          "command": "click",
+          "target": "id=btn-entrar",
+          "targets": [
+            ["id=btn-entrar", "id"],
+            ["css=#btn-entrar", "css:finder"],
+            ["xpath=//button[@id='btn-entrar']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "f51ea46d-9721-4fa3-9097-df0f8546b38c",
+          "comment": "Aguarda o carregamento do painel especifico de nutricionista",
+          "command": "waitForElementVisible",
+          "target": "id=painel-nutri",
+          "targets": [],
+          "value": "5000"
+        },
+        {
+          "id": "4fe28203-d64e-4b2a-89a1-5d7d344da0df",
+          "comment": "Valida se o email do usuario logado eh exibido no painel para confirmacao",
+          "command": "assertText",
+          "target": "id=perfil-usuario",
+          "targets": [],
+          "value": "nutri@caredaily.com"
+        }
+      ]
+    },
+    {
+      "id": "b3fd4b6e-b3c9-4a0b-9dfd-b541d1a1b16c",
+      "name": "TA002 - Login invalido",
+      "commands": [
+        {
+          "id": "cd0b6fa5-28eb-4040-afbf-64582f0ee9de",
+          "comment": "Abre a tela de login do Care Daily",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "31548a0f-6240-410a-b30f-21f456bf9578",
+          "comment": "Insere um email nao cadastrado ou incorreto",
+          "command": "type",
+          "target": "id=email",
+          "targets": [
+            ["id=email", "id"],
+            ["name=email", "name"],
+            ["css=#email", "css:finder"]
+          ],
+          "value": "invalido@caredaily.com"
+        },
+        {
+          "id": "51a4cd2a-40a2-4a0b-a08b-499dfd978a3c",
+          "comment": "Insere uma senha aleatoria incorreta",
+          "command": "type",
+          "target": "id=senha",
+          "targets": [
+            ["id=senha", "id"],
+            ["name=senha", "name"],
+            ["css=#senha", "css:finder"]
+          ],
+          "value": "SenhaIncorreta123"
+        },
+        {
+          "id": "834c9df1-87ab-49bd-9f20-fa0c8c4c7c7f",
+          "comment": "Clica no botao de submissao",
+          "command": "click",
+          "target": "id=btn-entrar",
+          "targets": [
+            ["id=btn-entrar", "id"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "dbcf181c-bf6b-4cc3-b9be-9ab984a1236f",
+          "comment": "Aguarda a mensagem de erro dinamica aparecer",
+          "command": "waitForElementVisible",
+          "target": "class=mensagem-erro",
+          "targets": [],
+          "value": "5000"
+        },
+        {
+          "id": "fe1a3a4c-db8e-4a8a-b9c1-8409e51c8a14",
+          "comment": "Verifica se o conteudo da mensagem condiz com o erro de credenciais",
+          "command": "assertText",
+          "target": "class=mensagem-erro",
+          "targets": [],
+          "value": "Credenciais incorretas"
+        }
+      ]
+    },
+    {
+      "id": "673cf2b2-6db4-46ab-a02b-2f085cae101f",
+      "name": "TA003 - Navegacao ate tela de plano alimentar",
+      "commands": [
+        {
+          "id": "0d20dcf1-bf04-40ee-a7cf-8984cbfe1a4b",
+          "comment": "Abre a tela de login",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dcf12a4b-01a2-4a0b-8dfb-b5cae1a2f1c8",
+          "comment": "Insere credenciais de paciente",
+          "command": "type",
+          "target": "id=email",
+          "targets": [],
+          "value": "paciente@caredaily.com"
+        },
+        {
+          "id": "8ca0cf9e-8840-410a-b31c-2df5e08b1a8f",
+          "comment": "Insere senha do paciente",
+          "command": "type",
+          "target": "id=senha",
+          "targets": [],
+          "value": "Paciente@1234"
+        },
+        {
+          "id": "b3fdca08-df8c-4a3b-87eb-987da0f8b1ca",
+          "comment": "Efetua login",
+          "command": "click",
+          "target": "id=btn-entrar",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c1a2f0df-8efb-402a-98ad-58f0cfda8f02",
+          "comment": "Aguarda o carregamento do link de dieta do menu lateral",
+          "command": "waitForElementVisible",
+          "target": "id=menu-dieta",
+          "targets": [],
+          "value": "5000"
+        },
+        {
+          "id": "dfbc0a32-901a-4fa8-b21a-2cfda0f8e1bc",
+          "comment": "Clica no menu lateral 'Plano Alimentar'",
+          "command": "click",
+          "target": "id=menu-dieta",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "27fa0b9c-8e40-4a8b-98df-5cf0a032de1c",
+          "comment": "Aguarda o carregamento do container de refeicoes",
+          "command": "waitForElementPresent",
+          "target": "id=refeicoes-container",
+          "targets": [],
+          "value": "5000"
+        },
+        {
+          "id": "bcfde204-98df-410a-b32c-da0f8ebcf1a2",
+          "comment": "Confirma a presenca da estrutura do plano alimentar do dia",
+          "command": "assertElementPresent",
+          "target": "id=refeicoes-container",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "cd0b6fa5-28eb-4040-afbf-64582f0ee9de",
+      "name": "TA004 - Registro ou validacao de alimento no plano alimentar",
+      "commands": [
+        {
+          "id": "2c7d91df-4b9d-482a-a9f4-b9c1d1a1b16c",
+          "comment": "Logar como nutricionista no sistema",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "31a2dfb0-10a2-4a0b-8dfb-b5cae1a2f1c8",
+          "comment": "Email do nutricionista",
+          "command": "type",
+          "target": "id=email",
+          "targets": [],
+          "value": "nutri@caredaily.com"
+        },
+        {
+          "id": "8ca0cf9e-8840-410a-b31c-2df5e08b1a8f",
+          "comment": "Senha do nutricionista",
+          "command": "type",
+          "target": "id=senha",
+          "targets": [],
+          "value": "Nutri@1234"
+        },
+        {
+          "id": "834c9df1-87ab-49bd-9f20-fa0c8c4c7c7f",
+          "comment": "Entrar",
+          "command": "click",
+          "target": "id=btn-entrar",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dcf12a4b-01a2-4a0b-8dfb-b5cae1a2f1c8",
+          "comment": "Aguarda barra de busca de pacientes",
+          "command": "waitForElementVisible",
+          "target": "id=busca-paciente",
+          "targets": [],
+          "value": "5000"
+        },
+        {
+          "id": "f51ea46d-9721-4fa3-9097-df0f8546b38c",
+          "comment": "Busca paciente Vali",
+          "command": "type",
+          "target": "id=busca-paciente",
+          "targets": [],
+          "value": "Vali"
+        },
+        {
+          "id": "4fe28203-d64e-4b2a-89a1-5d7d344da0df",
+          "comment": "Clica para acessar prontuario",
+          "command": "click",
+          "target": "id=btn-ver-paciente",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "18f50cd5-9154-46c5-afc7-f13bb10be968",
+          "comment": "Acessa aba do plano",
+          "command": "click",
+          "target": "id=aba-plano-alimentar",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "27d0f367-1110-410a-b333-88575005e839",
+          "comment": "Abre modal de inclusao de alimento",
+          "command": "click",
+          "target": "id=btn-add-alimento",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "90d1f8eb-bf38-4e4b-9e45-812e9b867c29",
+          "comment": "Preenche Alimento",
+          "command": "type",
+          "target": "id=input-alimento",
+          "targets": [],
+          "value": "Banana"
+        },
+        {
+          "id": "e963db81-4b1e-450f-90e6-a2122d641ea6",
+          "comment": "Preenche Quantidade",
+          "command": "type",
+          "target": "id=input-quantidade",
+          "targets": [],
+          "value": "1 unidade"
+        },
+        {
+          "id": "c1f88ca0-cd9b-43fe-a808-724bcde594f7",
+          "comment": "Preenche Calorias",
+          "command": "type",
+          "target": "id=input-calorias",
+          "targets": [],
+          "value": "150"
+        },
+        {
+          "id": "89b7c844-325b-42fa-97eb-2a3bc5ee1027",
+          "comment": "Seleciona refeicao Cafe da Manha",
+          "command": "select",
+          "target": "id=select-refeicao",
+          "targets": [],
+          "value": "label=Café da Manhã"
+        },
+        {
+          "id": "18f50cd5-9154-46c5-afc7-f13bb10be968",
+          "comment": "Salva alimento no plano",
+          "command": "click",
+          "target": "id=btn-salvar-alimento",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "27d0f367-1110-410a-b333-88575005e839",
+          "comment": "Espera o alimento aparecer na tabela",
+          "command": "waitForElementVisible",
+          "target": "xpath=//td[contains(.,'Banana')]",
+          "targets": [],
+          "value": "5000"
+        },
+        {
+          "id": "90d1f8eb-bf38-4e4b-9e45-812e9b867c29",
+          "comment": "Valida presenca do alimento",
+          "command": "assertText",
+          "target": "xpath=//td[contains(.,'Banana')]",
+          "targets": [],
+          "value": "Banana"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "5fa23281-bfde-4bde-8dfb-b5cae1a2f1c8",
+      "name": "CareDaily_Sprint4_TestSuite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "da0d59ce-0814-49c0-9d0d-5872a08f5d02",
+        "b3fd4b6e-b3c9-4a0b-9dfd-b541d1a1b16c",
+        "673cf2b2-6db4-46ab-a02b-2f085cae101f",
+        "cd0b6fa5-28eb-4040-afbf-64582f0ee9de"
+      ]
+    }
+  ],
+  "urls": [
+    "http://localhost:3000"
+  ],
+  "plugins": []
+}

@@ -1,0 +1,10 @@
+Metrica;Quantidade;Observacao
+Total de casos planejados;43;Mapeamento completo da Sprint 4
+Total de casos aprovados;0;Manter pendente até execução formal no Azure Boards e validação final
+Total de casos reprovados;0;Nenhum defeito impeditivo registrado no pacote documental
+Total de casos bloqueados;0;Nenhuma funcionalidade marcada como bloqueada no pacote documental
+Total de casos pendentes;43;Status preservado até execução oficial dos testes manuais e automatizados
+Total de evidências anexadas;25;Prints encontrados na pasta evidencias
+Total de evidências faltantes;7;Faltam evidências específicas de testes negativos, auditoria/log, vídeo de automação e links oficiais
+Riscos críticos pendentes;3;Azure Boards real, vídeo dos testes automatizados e mascaramento final de dados pessoais
+Parecer final;Condicional;Entrega documental pronta, dependendo de cadastro no Azure Boards, execução gravada e links finais
