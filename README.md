@@ -114,4 +114,4 @@ As evidências devem ser organizadas nas seguintes pastas:
 * **Link do repositório GitHub:** https://github.com/Vinissil/caredaily-sprint4-qa/tree/develop
 * **Branch utilizada:** develop
 * **Link do Azure Boards:** https://dev.azure.com/caredaily-sprint4-qa/CareDaily%20Sprint%204%20QA/_workitems/recentlycreated/
-* **Link do vídeo de automação:** [A preencher](https://youtu.be/S3OuLzriNEs)
+* **Link do vídeo de automação:** [Video](https://youtu.be/S3OuLzriNEs)
