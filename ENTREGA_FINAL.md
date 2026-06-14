@@ -6,18 +6,18 @@ Este documento funciona como uma lista de verificação (checklist) para garanti
 
 ## 📋 Checklist de Validação de Entrega
 
-* [ ] **Repositório GitHub público criado** (para disponibilização pública do código e documentação da Sprint 4).
-* [ ] **Arquivos enviados na branch develop** (garantindo que o fluxo GitFlow do projeto seja respeitado).
+* [X] **Repositório GitHub público criado** (para disponibilização pública do código e documentação da Sprint 4).
+* [X] **Arquivos enviados na branch develop** (garantindo que o fluxo GitFlow do projeto seja respeitado).
 * [x] **Azure Boards criado** (projeto configurado no ambiente do Azure DevOps).
 * [x] **Testes manuais cadastrados no Azure Boards** (criação e organização dos 20 casos de testes planejados no board).
 * [x] **Dados de entrada preenchidos** (valores predefinidos de login, alimentos, calorias e medidas inseridos nos testes).
 * [x] **Dados de saída esperados preenchidos** (resultado final das ações definido nos testes).
 * [x] **Passos dos testes preenchidos** (lista ordenada de etapas de execução documentada nos testes).
 * [x] **Pelo menos 4 testes automatizados criados** (cenários TA001 a TA004 configurados no Selenium IDE).
-* [ ] **Vídeo de execução gravado** (captura de tela demonstrando o Selenium IDE executando os testes automatizados com sucesso).
-* [ ] **Link do GitHub preenchido** (referência no README.md raiz para o repositório público).
+* [X] **Vídeo de execução gravado** (captura de tela demonstrando o Selenium IDE executando os testes automatizados com sucesso).
+* [X] **Link do GitHub preenchido** (referência no README.md raiz para o repositório público).
 * [x] **Link do Azure Boards preenchido** (referência no README.md raiz para o board público).
-* [ ] **Link do vídeo preenchido** (link para assistir à gravação de execução dos testes automatizados).
+* [X] **Link do vídeo preenchido** (link para assistir à gravação de execução dos testes automatizados).
 * [x] **Dados pessoais mascarados nas evidências** (garantia de conformidade com a LGPD, sem CPFs, e-mails ou telefones reais visíveis nos prints e vídeos).
 
 ---
@@ -27,7 +27,7 @@ Este documento funciona como uma lista de verificação (checklist) para garanti
 * **Link do repositório GitHub:** https://github.com/Vinissil/caredaily-sprint4-qa/tree/develop
 * **Branch utilizada:** develop
 * **Link do Azure Boards:** https://dev.azure.com/caredaily-sprint4-qa/CareDaily%20Sprint%204%20QA/_workitems/recentlycreated/
-* **Link do vídeo de automação:** A preencher
+* **Link do vídeo de automação:** [Video](https://youtu.be/S3OuLzriNEs)
 
 ---
 
